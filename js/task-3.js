@@ -110,3 +110,11 @@ console.log(getElementWidth('200px', '0px', '0px'));
 
 const message = 'JavaScript is awesome';
 console.log(message.toUpperCase());
+
+//! slice method
+
+function getSubstring(string, length) {
+  return string.slice(0, length);
+}
+
+console.log(getSubstring("Hello world", 5));
