@@ -8,6 +8,22 @@ function getElementWidth(content, padding, border) {
 console.log(getElementWidth('50px', '8px', '4px'));
 console.log(getElementWidth('60px', '12px', '8.5px'));
 console.log(getElementWidth('200px', '0px', '0px'));
+
+//! how functions work
+
+function calcBMI(weight, height) {
+  weight = weight.replace(',', '.');
+  height = height.replace(',', '.');
+  weight = Number(weight);
+  height = Number(height);
+  const result = weight / (height * height);
+
+  return Number(result.toFixed(1));
+}
+
+const bmi = calcBMI('68.73', '1.75');
+console.log(bmi);
+
 //! if...else
 
 // function checkAge(age) {
@@ -106,15 +122,97 @@ console.log(getElementWidth('200px', '0px', '0px'));
 
 // console.log(toggleModalVisibility(true));
 
-//! методи
+//! методи рядків
 
-const message = 'JavaScript is awesome';
-console.log(message.toUpperCase());
+//* slice method
 
-//! slice method
+// function getSubstring(string, length) {
+//   return string.slice(0, length);
+// }
 
-function getSubstring(string, length) {
-  return string.slice(0, length);
-}
+// console.log(getSubstring('Hello world', 5));
 
-console.log(getSubstring("Hello world", 5));
+//* methods toLowerCase() і toUpperCase()
+
+// const message = 'Welcome to Bahamas!';
+// console.log(message.toUpperCase());
+// console.log(message);
+
+// function normalizeInput(input, to) {
+//   if (to === 'upper') {
+//     return input.toUpperCase();
+//   } else {
+//     return input.toLowerCase();
+//   }
+// }
+
+// console.log(normalizeInput('Big SALE', 'lower'));
+
+//* includes method
+
+// function checkForName(fullName, firstName) {
+//   fullName = fullName.toUpperCase();
+//   firstName = firstName.toUpperCase();
+//   return fullName.includes(firstName);
+// }
+
+// console.log(checkForName('Caty Stars', 'CaTy'));
+
+//* startsWith() і endsWith()
+
+// function checkFileExtension(fileName, ext) {
+//   fileName = fileName.toLowerCase();
+//   if (fileName.endsWith(ext)) {
+//     return 'File extension matches';
+//   } else {
+//     return 'File extension does not match';
+//   }
+// }
+
+// console.log(checkFileExtension('inDex.html', '.hTml'));
+
+//*  indexOf + slice
+
+// function getFileName(file) {
+//   if (file.indexOf('.') === -1) {
+//     return file;
+//   } else {
+//     return file.slice(0, file.indexOf('.'));
+//   }
+// }
+
+// console.log(getFileName('app.js'));
+
+//* trim
+
+// function createFileName(name, ext) {
+//   return `${name.trim()}.${ext.trim()}`;
+// }
+
+// console.log(createFileName('report ', 'csv'));
+
+// //! cycles
+
+// //* while
+
+// function calculateTotal(number) {
+//   let sum = 0;
+//   let i = 1;
+//   while (i <= number) {
+//     sum += i;
+//     i++;
+//   }
+//   return sum;
+// }
+
+// console.log(calculateTotal(3));
+
+// for (let i = 0; i <= 5; i++) {
+//   console.log(i);
+// }
+
+// function calculateEvenTotal(number) {
+//   return number++;
+// }
+
+// console.log(calculateEvenTotal(6));
